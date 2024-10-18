@@ -1,0 +1,15 @@
+services:
+  db:
+    image: mysql:8.3.0
+    container_name: mysql_django
+    restart: unless-stopped
+    env_file: ./.env
+    ports:
+      - ${DATABASE_PORT}:3306
+    volumes:
+      - ./.docker/database:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: ${DATABASE_NAME}
+      MYSQL_ROOT_PASSWORD: ${ROOT_PASSWORD}
+
+

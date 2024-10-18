@@ -1,0 +1,9 @@
+venv/
+.env
+root_api/__pycache__
+gelato_api/__pycache__
+.docker
+gelato_api/migrations/*
+!gelato_api/migrations/__init__.py
+media/
+requirements.txt
