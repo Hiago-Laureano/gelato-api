@@ -76,10 +76,12 @@ class OrderSerializer(serializers.ModelSerializer):
             "created"
         ]
         extra_kwargs = {
-            "active": {"read_only": True, "default": True}
+            "active": {"default": True},
+            "status": {"default": "Pedido solicitado"}
         }
     def create(self, validated_data):
         validated_data["user"] = self.context["request"].user
+        validated_data["status"] = "Pedido solicitado"
         return super().create(validated_data)
 
 class UserSerializer(serializers.ModelSerializer):
