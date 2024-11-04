@@ -4,11 +4,13 @@
 ![DjangoREST](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
-Este projeto é uma API RESTful contruída com **Python** e **Django Rest Framework** para venda de sorvetes e doces semelhantes.
+Este projeto é uma API RESTful contruída com **Python** e **Django Rest Framework** para controle de vendas de sorvetes e doces semelhantes.
 
 ## Como usar o projeto
 
 Instale o Docker e o Python caso não possuir em sua maquina
+
+obs.: Docker será usado para subir o servidor de banco de dados MySQL
 
 ### Clone o Repositório
 ```sh
@@ -37,6 +39,27 @@ SECRET_KEY -- key da API
 ```
 
 ## Ambiente de Desenvolvimento
+
+### Crie um ambiente virtual para instalar as dependências do python
+
+```sh
+python -m venv venv
+```
+### Acesse o ambiente virtual
+
+Windows
+```sh
+. venv/Scripts/activate
+```
+Linux
+```sh
+. venv/bin/activate
+```
+
+### Instale as Dependências
+```sh
+pip install -r requirements-dev.txt
+```
 
 ### Subir o serviço com o banco de dados
 ```sh
