@@ -245,7 +245,7 @@ PATCH /api/v1/orders/{id}/ - Atualizar dados de um pedido parcialmente [permiss�
 
 CAMPOS DE /api/v1/orders/ = [
     id[inteiro] <-- apenas GET
-    comment[texto] <-- obrigat처rio
+    comment[texto contendo os dados do pedido, ex.: 3x sorvetes 500ml - sabor: uva, morango - complementos: calda de morango | Pagamento no pix | obs.: Caprichar] <-- obrigat처rio
     delivery[booleano] <-- obrigat처rio
     location[texto] <-- obrigat처rio
     status[texto] <-- n찾o obrigat처rio
