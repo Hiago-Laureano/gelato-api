@@ -126,7 +126,7 @@ class Product(Item):
 
 class Order(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    comment = models.CharField(max_length=255)
+    comment = models.TextField()
     delivery = models.BooleanField()
     location = models.CharField(max_length=255)
     status = models.CharField(max_length=100)
